@@ -20,7 +20,7 @@ public class ReadDaoImpl implements ReadDao{
             //获取连接
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            conn = DriverManager.getConnection("jdbc:mysql://47.100.114.251:3306/wizarddb?useSSL=false&serverTimezone=UTC","root","po199837");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/wizarddb?useSSL=false&serverTimezone=UTC","root","po199837");
             //运行SQL语句
             String sql = "select * from " + table + " where article_id=" + aid ;
             System.out.println(sql);

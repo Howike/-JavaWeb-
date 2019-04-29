@@ -22,7 +22,7 @@ public class UploadDaoImpl implements UploadDao {
 			//加载驱动
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			//获取连接
-			conn = DriverManager.getConnection("jdbc:mysql://47.100.114.251:3306/wizarddb?useSSL=false&serverTimezone=UTC","root","po199837");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/wizarddb?useSSL=false&serverTimezone=UTC","root","po199837");
 			//创建SQL命令
 			String sql = "insert into Article values(default,?,default,?,?,?,?)";
 			//创建SQL命令对象
@@ -87,7 +87,7 @@ public class UploadDaoImpl implements UploadDao {
             //获取连接
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            conn = DriverManager.getConnection("jdbc:mysql://47.100.114.251:3306/wizarddb?useSSL=false&serverTimezone=UTC","root","po199837");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/wizarddb?useSSL=false&serverTimezone=UTC","root","po199837");
             //运行SQL语句
             String sql = "select * from " + table + " where user_id='" + userid + "' order by article_time desc";
             stat = conn.createStatement();

@@ -21,7 +21,7 @@ public class UserDaoImpl implements UserDao{
 			//加载驱动
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			//获取链接
-			conn=DriverManager.getConnection("jdbc:mysql://47.100.114.251:3306/wizarddb?useSSL=false&serverTimezone=UTC","root","po199837");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/wizarddb?useSSL=false&serverTimezone=UTC","root","po199837");
 			if(!conn.isClosed())
 				System.out.print("successed connecting to database");
 			//创建sql命令
@@ -82,7 +82,7 @@ public class UserDaoImpl implements UserDao{
 					//加载驱动
 					Class.forName("com.mysql.cj.jdbc.Driver");
 					//获取连接
-					conn=DriverManager.getConnection("jdbc:mysql://47.100.114.251:3306/wizarddb?useSSL=false&serverTimezone=UTC","root","po199837");
+					conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/wizarddb?useSSL=false&serverTimezone=UTC","root","po199837");
 					//创建SQL命令
 					String sql="insert into user values(default ,? ,? ,? ,default ,? ,? ,? )";
 					//创建SQL命令对象
